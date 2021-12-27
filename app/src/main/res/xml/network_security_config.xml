@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Requirement IDs: A_15887-02 -->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="true">
+        <!--
+        <trust-anchors>
+            <certificates src="@raw/cacert" />
+        </trust-anchors>
+        -->
+    </base-config>
+    <debug-overrides>
+        <trust-anchors>
+            <!-- Enable usage of Charles Proxy -->
+            <!-- Download certificate like described here: https://stackoverflow.com/questions/39215229/how-to-get-charles-proxy-work-with-android-7-nougat -->
+            <certificates src="user" />
+            <certificates src="system" />
+        </trust-anchors>
+    </debug-overrides>
+</network-security-config>
